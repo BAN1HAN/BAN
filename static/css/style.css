@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Page</title>
-    <!-- ربط CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-    <h1>Hello Flask!</h1>
+h1 {
+    color: #00ffcc;
+    margin-top: 50px;
+}
 
-    <!-- ربط JS -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+a {
+    color: #00ccff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:hover {
+    color: #ffffff;
+}
