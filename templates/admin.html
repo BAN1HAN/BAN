@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>لوحة المطور</title>
+</head>
+<body>
+    <h2>مرحباً بالمطور BAN1HAN</h2>
+
+    <h3>قائمة المستخدمين:</h3>
+    <ul>
+        {% for user in users %}
+        <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>إضافة تحدي جديد:</h3>
+    <form method="post">
+        عنوان التحدي: <input type="text" name="title"><br>
+        وصف التحدي: <input type="text" name="description"><br>
+        <input type="submit" value="إضافة">
+    </form>
+
+    <h3>التحديات:</h3>
+    <ul>
+        {% for challenge in challenges %}
+        <li><strong>{{ challenge.title }}</strong>: {{ challenge.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <br><a href="/">رجوع</a> | <a href="/logout">تسجيل الخروج</a>
+</body>
+</html>
