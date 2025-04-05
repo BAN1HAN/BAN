@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HACKWITHBAN</title>
+</head>
+<body>
+    <h1>مرحباً بك في HACKWITHBAN</h1>
+
+    {% if session.get('user') %}
+        <p>مرحباً، {{ session['user'] }}</p>
+        <a href="/logout">تسجيل الخروج</a><br>
+        {% if session['user'] == 'BAN1HAN' %}
+            <a href="/admin">لوحة المطور</a>
+        {% endif %}
+    {% else %}
+        <a href="/login">تسجيل الدخول</a> |
+        <a href="/register">تسجيل حساب جديد</a>
+    {% endif %}
+</body>
+</html>
